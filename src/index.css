@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --section-overlay : rgba(0,0,0,0.7);
+    --background-overlay : rgba(0,0,0,0.4);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Karla;
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-overlay);
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.section {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    color: white;
+}
+
+.section__inputs, .section__temperature {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--section-overlay);
+}
+
+/* .section__inputs > input {
+    border: 0.8px solid white;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem;
+    font-size: 20px;
+    font-weight: 200;
+} */
+
+/* .section__inputs > input:focus {
+    outline: none;
+} */
+
+.section__inputs > button {
+    padding: 10px 50px;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section__inputs>button:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.details>h3 {
+    font-size: 15px;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+
+.temperature>h1 {
+    font-size: 60px;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar > input {
+    /* border: 0.5px solid white; */
+    box-shadow: 0 0 1px 1px white;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: white;
+    padding: 0.6rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.search-bar > input:focus {
+    outline: none;
+}
+
+.search-bar > button {
+    padding: 0.45rem;
+    background-color: transparent;
+    /* border: 0.5px solid white; */
+    box-shadow: 0 0 1px 1px white;
+    color: white;
+    border-radius: 0.4rem;
+    margin-left: 2.5px;
+}
+
+.search-bar > button:hover {
+    cursor: pointer;
 }
